@@ -6,6 +6,7 @@ import {Home} from './components/home/home.component';
 
 interface IApp {
   title: string;
+  connected: boolean;
 }
 
 @Component({
@@ -13,15 +14,20 @@ interface IApp {
   providers: [...FORM_PROVIDERS],
   directives: [...ROUTER_DIRECTIVES],
   pipes: [],
-  template: `<h1>yo</h1>`
+  template: `
+    <div id="app">
+      <router-outlet></router-outlet>
+    </div>
+  `
 })
 
-// @RouteConfig([
-//   { path: '/', component: Home, name: 'Index' },
-// ])
+@RouteConfig([
+  { path: '/', component: Home, name: 'Index' },
+])
 
 export class App implements IApp {
   public title = 'Dogz';
+  public connected = false;
   constructor() {
 
   }

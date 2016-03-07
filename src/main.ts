@@ -52,9 +52,4 @@ export function main() {
  * experimental version by @gdi2290
  */
 
-function bootstrapDomReady() {
-  // bootstrap after document is ready
-  return document.addEventListener('DOMContentLoaded', main);
-}
-
-bootstrapDomReady();
+document.addEventListener('DOMContentLoaded', main);
