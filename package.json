@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "karma start",
-    "server": "npm run server:dev:hmr",
     "server:dev": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached  --content-base src/",
-    "server:dev:hot": "npm run server:dev -- --hot",
-    "test:watch": "karma start --auto-watch --no-single-run"
+    "dev:hot": "npm run server:dev -- --hot",
+    "test:w": "karma start --auto-watch --no-single-run"
   },
   "repository": {
     "type": "git",
